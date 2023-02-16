@@ -6,13 +6,24 @@
 
 int main() {
 
-	int num{};
-	double total{};
-	std::string name{};
-	std::string info{ "Jenny 100 123.4" };
-	std::istringstream iss{ info };
-
-
+int num{};
+double total{};
+std::string name{};
+std::string info{ "Jenny 100 123.4" };
+std::istringstream iss{ info };
+int num{};
+double total{};
+std::string name{};
+std::string info{ "Jenny 100 123.4" };
+std::string info_1{ "Elizabeth 101 1234.5" };
+std::istringstream iss{ info };
+iss >> name >> num >> total; //extracts the information from the stream and allocates them to the specfc varaibles.
+std::cout << std::setw(10) << std::left << name << std::setw(5) << num
+	  << std::setw(10) << total << std::endl;
+std::istringstream iss_1{ info_1 };
+iss_1 >> name >> num >> total; //extracts the information from the stream and allocates them to the specfc varaibles.
+std::cout << std::setw(10) << std::left << name << std::setw(5) << num 
+<< std::setw(10) << total << std::endl;	
 
 return 0;
 }
