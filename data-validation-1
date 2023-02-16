@@ -1,0 +1,24 @@
+//Data Validation of string streams.
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <sstream>
+#include <limits>
+
+int main() {
+std::cout << std::setw(33) << std::setfill('-') << "" << std::endl << std::endl;  
+	int value{};
+	std::string entry{};
+	bool done = false;
+	do {
+		std::cout << "Please enter an integer: ";
+		std::cin >> entry;
+		std::istringstream validator{ entry };
+		if (validator >> value)
+			done = true;
+		else
+			std::cout << "Sorry that is not an integer." << std::endl;
+	} while (!done);
+
+return 0;
+}
