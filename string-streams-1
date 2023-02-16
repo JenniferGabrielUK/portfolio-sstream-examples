@@ -1,0 +1,18 @@
+#include <iostream>
+#include <iomanip>
+#include <sstream>
+#include <string>
+#include <limits>
+
+int main() {
+
+	int num{};
+	double total{};
+	std::string name{};
+	std::string info{ "Jenny 100 123.4" };
+	std::istringstream iss{ info };
+
+
+
+return 0;
+}
