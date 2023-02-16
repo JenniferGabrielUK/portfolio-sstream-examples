@@ -25,5 +25,12 @@ iss_1 >> name >> num >> total; //extracts the information from the stream and al
 std::cout << std::setw(10) << std::left << name << std::setw(5) << num 
 << std::setw(10) << total << std::endl;	
 
+std::cout << std::setw(33) << std::setfill('-') << "" << std::endl << std::endl;
+std::ostringstream oss{};
+oss << std::setw(10) << std::left << name
+	<< std::setw(5) << num
+	<< std::setw(10) << total << std::endl;
+std::cout << oss.str() << std::endl;
+
 return 0;
 }
